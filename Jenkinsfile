@@ -32,7 +32,7 @@ pipeline {
         success {
             echo "This will be executed only when all stages succeed"
             junit '**/*xml'
-            jacoco execPattern: "**/target/jacoco.exec"
+           jacoco exclusionPattern: '**/Main.class', execPattern: '**/target/**.exec'
 
         }
         failure {
