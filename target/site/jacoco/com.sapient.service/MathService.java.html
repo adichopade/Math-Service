@@ -31,9 +31,9 @@ import java.util.ArrayList;
 <span class="fc bfc" id="L31" title="All 4 branches covered.">        if (n % 2 == 0 || n % 3 == 0) </span>
 <span class="fc" id="L32">            return false; </span>
   
-<span class="pc bpc" id="L34" title="1 of 2 branches missed.">        for (int i = 5; i * i &lt;= n; i = i + 6) </span>
-<span class="nc bnc" id="L35" title="All 4 branches missed.">            if (n % i == 0 || n % (i + 2) == 0) {</span>
-<span class="nc" id="L36">            	return false;</span>
+<span class="pc bfc" id="L34" title="All 2 branches covered.">        for (int i = 5; i * i &lt;= n; i = i + 6) </span>
+<span class="pc bpc" id="L35" title="3 of 4 branches missed.">            if (n % i == 0 || n % (i + 2) == 0) {</span>
+<span class="fc" id="L36">            	return false;</span>
             }
                  
   
@@ -42,14 +42,14 @@ import java.util.ArrayList;
 	}
 	public int[] primeArray(int a,int b) {
 <span class="fc" id="L44">		ArrayList&lt;Integer&gt; ans=new ArrayList&lt;&gt;();</span>
-<span class="pc bpc" id="L45" title="1 of 2 branches missed.">		if(a&lt;b) {</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">		if(a&lt;b) {</span>
 <span class="fc bfc" id="L46" title="All 2 branches covered.">			for(int i=a;i&lt;=b;i++) {</span>
 <span class="fc bfc" id="L47" title="All 2 branches covered.">				if(isPrime(i)) {</span>
 <span class="fc" id="L48">					ans.add(i);</span>
 				}
 			}
 		}else {
-<span class="nc bnc" id="L52" title="All 2 branches missed.">			for(int i=b;i&gt;=a;i--) {</span>
+<span class="pc bpc" id="L52" title="1 of 2 branches missed.">			for(int i=b;i&gt;=a;i--) {</span>
 <span class="nc bnc" id="L53" title="All 2 branches missed.">				if(isPrime(i)) {</span>
 <span class="nc" id="L54">					ans.add(i);</span>
 				}

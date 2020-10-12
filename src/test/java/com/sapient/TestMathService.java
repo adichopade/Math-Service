@@ -35,8 +35,13 @@ public class TestMathService {
 		int[] result=service.primeArray(5,10);
 		Assertions.assertTrue(Arrays.equals(actualans, result));
 	}
+	@Test
+	public void testprimeArray1() {
+		int[] actualans=new int[] {7,5};
+		int[] result=service.primeArray(2040,2);
+		Assertions.assertFalse(Arrays.equals(actualans, result));
 	
-	
+	}
 
 	@Test
 	public void testPrime() {
@@ -60,6 +65,12 @@ public class TestMathService {
 	public void testPrime2() {
 		boolean actualans=true;
 		boolean result=service.isPrime(2);
+		Assertions.assertEquals(actualans,result);
+	}
+	@Test
+	public void testPrime3() {
+		boolean actualans=false;
+		boolean result=service.isPrime(1355);
 		Assertions.assertEquals(actualans,result);
 	}
 

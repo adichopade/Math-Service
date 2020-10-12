@@ -7,7 +7,6 @@ pipeline {
     environment {
         JAR_FILENAME = "math-service"
         JAR_VERSION = "0.0.1-SNAPSHOT"
-        PARAM1 = "Aadesh Chopade"
     }
 
     stages {
@@ -33,7 +32,7 @@ pipeline {
         success {
             echo "This will be executed only when all stages succeed"
             junit '**/*xml'
-            
+            jacoco execPattern: "**/target/jacoco.exec"
 
         }
         failure {
